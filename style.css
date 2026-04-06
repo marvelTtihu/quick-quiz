@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box;}
+
+:root {
+    --bg: #e9e9e9;
+    --surface: #f0ede8;
+    --text: #111111;
+    --text-muted: #555555;
+    --muted: #696969;
+    --border: #111111;
+    --accent: #000000;
+}
+
+body {
+    font-family: 'DM sans', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+}
+
+.title {
+    margin-bottom: 3rem;
+    font-size: clamp(1.7rem, 1.05rem + 2.1667vw, 3rem);
+    font-family: 'DM Serif Display', sans-serif;
+    color: var(--text);
+    text-decoration: underline;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border: 4px solid var(--border);
+    box-shadow: 0 0 5px 6px rgba(48, 48, 48, 0.2);
+    padding: 3rem 3rem;
+    border-radius: 18px;
+    width: min(100%, 1200px);
+}
+
+.question {
+    font-size: clamp(1.2rem, 0.95rem + 0.8333vw, 1.7rem);
+    color: var(--text);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.8rem;
+    padding: 8px 10px;
+    margin-bottom: 1rem;
+}
+
+.options button {
+    flex: 1;
+    max-width: 2000px;
+    padding: 12px 10px;
+    background: var(--accent);
+    color: var(--surface);
+    border: none;
+    font-family: 'DM Sans', sans-serif;
+    border-radius: 10px;
+    font-size: clamp(0.85rem, 0.775rem + 0.25vw, 1rem);
+    text-align: center;
+    white-space: nowrap;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.options button:hover {
+    transform: scale(1.05);
+    background: var(--muted);
+}
+
+.options button:active {    
+    transform: scale(0.95);
+    background: var(--accent);
+    color: var(--bg);
+}
+
+/* Buttons */
+.btn-group {
+    align-self: flex-end;
+    display: flex;
+    gap: 12px;
+
+}
+
+.primary-btn, 
+.secondary-btn, 
+.another-btn {
+    padding: 10px 20px;
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    border-radius: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.another-btn {
+    margin-top: 2rem;
+    background: transparent;
+    color: var(--text);
+    border: 2px solid var(--border);
+}
+
+
+:is(.secondary-btn, .another-btn):hover {
+    transform: scale(1.05);
+}
+
+:is(.primary-btn, .secondary-btn, .another-btn):active {
+    transform: translateY(-4px);
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .options {
+        flex-wrap: wrap;
+    }
+
+    .options button {
+        flex: 1 1 calc(50% - .8rem);
+        white-space: normal;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 80%;
+        padding: 2rem 1.5rem;  
+    }
+
+    .options {
+        flex-direction: column;
+    }
+    .options button {
+        width: 100%;
+    }
+    .results {
+        text-align: center;
+    }
+}
