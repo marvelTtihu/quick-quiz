@@ -139,21 +139,6 @@ body {
 }
 
 
-@media (max-width: 768px) {
-    .container {
-        max-width: 90%;
-    }
-
-    .options {
-        flex-wrap: wrap;
-    }
-
-    .options button {
-        flex: 1 1 calc(50% - .8rem);
-        white-space: normal;
-    }
-}
-
 @media (max-width: 480px) {
     .container {
         max-width: 80%;
@@ -168,5 +153,20 @@ body {
     }
     .results {
         text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .options {
+        flex-wrap: wrap;
+    }
+
+    .options button {
+        flex: 1 1 calc(50% - .8rem);
+        white-space: normal;
     }
 }
