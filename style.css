@@ -139,23 +139,6 @@ body {
 }
 
 
-@media (max-width: 480px) {
-    .container {
-        max-width: 80%;
-        padding: 2rem 1.5rem;  
-    }
-
-    .options {
-        flex-direction: column;
-    }
-    .options button {
-        width: 100%;
-    }
-    .results {
-        text-align: center;
-    }
-}
-
 @media (max-width: 768px) {
     .container {
         max-width: 90%;
@@ -168,5 +151,24 @@ body {
     .options button {
         flex: 1 1 calc(50% - .8rem);
         white-space: normal;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 80%;
+        padding: 2rem 1.5rem;  
+    }
+
+    .options {
+        flex-direction: column;
+    }
+    .options button {
+        flex: unset;
+        width: 100%;
+        white-space: normal;
+    }
+    .results {
+        text-align: center;
     }
 }
