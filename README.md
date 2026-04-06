@@ -16,7 +16,7 @@ This is a quick quiz that contains basic front-end questions, and only has 5 que
 
 ## DEMO
 
-You can see the dome right here => [DEMO]
+You can see the dome right here => [DEMO](https://marvelttihu.github.io/quick-quiz/)
 
 ## What I learned 
 
